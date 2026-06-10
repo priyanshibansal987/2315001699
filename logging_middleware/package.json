@@ -1,0 +1,9 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Express middleware for logging incoming requests and response status with timing.",
+  "main": "middleware.js",
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {}
+}

@@ -1,0 +1,445 @@
+{
+  "info": {
+    "name": "Assessment APIs Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Question 1 - User CRUD API (Port 5001)",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5001",
+              "path": ["users"]
+            }
+          }
+        },
+        {
+          "name": "Get User By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5001",
+              "path": ["users", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"role\": \"User\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5001/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5001",
+              "path": ["users"]
+            }
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Updated\",\n  \"email\": \"john@example.com\",\n  \"role\": \"Moderator\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5001/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5001",
+              "path": ["users", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5001",
+              "path": ["users", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 2 - Product Inventory API (Port 5002)",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5002",
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Get Product By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5002",
+              "path": ["products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Wireless Mouse\",\n  \"price\": 29.99,\n  \"description\": \"Bluetooth rechargeable mouse\",\n  \"quantity\": 50\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5002/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5002",
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Wireless Mouse SE\",\n  \"price\": 34.99,\n  \"description\": \"Special edition mouse\",\n  \"quantity\": 40\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5002/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5002",
+              "path": ["products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5002",
+              "path": ["products", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 3 - Authentication API (Port 5003)",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"secure123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5003/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5003",
+              "path": ["register"]
+            }
+          }
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"secure123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5003/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5003",
+              "path": ["login"]
+            }
+          }
+        },
+        {
+          "name": "Get Registered Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5003",
+              "path": ["users"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 5 - Student Management API (Port 5005)",
+      "item": [
+        {
+          "name": "Get All Students",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5005/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5005",
+              "path": ["students"]
+            }
+          }
+        },
+        {
+          "name": "Get Student By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5005/students/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5005",
+              "path": ["students", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Student",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Emma Watson\",\n  \"rollNumber\": \"CS104\",\n  \"department\": \"Computer Science\",\n  \"grade\": \"A+\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5005/students",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5005",
+              "path": ["students"]
+            }
+          }
+        },
+        {
+          "name": "Update Student",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Emma Watson\",\n  \"rollNumber\": \"CS104\",\n  \"department\": \"Software Engineering\",\n  \"grade\": \"A+\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5005/students/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5005",
+              "path": ["students", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Student",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5005/students/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5005",
+              "path": ["students", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question 6 - Employee Management API (Port 5006)",
+      "item": [
+        {
+          "name": "Get All Employees",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5006/employees",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5006",
+              "path": ["employees"]
+            }
+          }
+        },
+        {
+          "name": "Get Employee By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5006/employees/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5006",
+              "path": ["employees", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Employee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Smith\",\n  \"email\": \"john.smith@company.com\",\n  \"department\": \"Sales\",\n  \"salary\": 55000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5006/employees",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5006",
+              "path": ["employees"]
+            }
+          }
+        },
+        {
+          "name": "Update Employee",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Smith\",\n  \"email\": \"john.smith@company.com\",\n  \"department\": \"Marketing\",\n  \"salary\": 58000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5006/employees/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5006",
+              "path": ["employees", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5006/employees/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5006",
+              "path": ["employees", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

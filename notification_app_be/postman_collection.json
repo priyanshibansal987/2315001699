@@ -1,0 +1,165 @@
+{
+  "info": {
+    "name": "Notification System API Collection",
+    "description": "Collection of API requests to test the notification system (REST & SSE).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fetch All Notifications",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5007/api/notifications?page=1&limit=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5007",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "notification_type",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch Priority Inbox Notifications",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5007/api/notifications/priority?limit=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5007",
+          "path": [
+            "api",
+            "notifications",
+            "priority"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Notification (Publish)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"Placement\",\n  \"message\": \"CSX Corporation hiring is live!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5007/api/notifications",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5007",
+          "path": [
+            "api",
+            "notifications"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mark Notification as Read",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5007/api/notifications/d146095a-0d86-4a34-9e69-3900a14576bc/read",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5007",
+          "path": [
+            "api",
+            "notifications",
+            "d146095a-0d86-4a34-9e69-3900a14576bc",
+            "read"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mark All as Read",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5007/api/notifications/read-all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5007",
+          "path": [
+            "api",
+            "notifications",
+            "read-all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Notification",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5007/api/notifications/d146095a-0d86-4a34-9e69-3900a14576bc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5007",
+          "path": [
+            "api",
+            "notifications",
+            "d146095a-0d86-4a34-9e69-3900a14576bc"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
